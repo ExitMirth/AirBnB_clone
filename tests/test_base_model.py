@@ -1,9 +1,19 @@
 #!/usr/bin/python3
+"""Module of Unittests"""
+
 import unittest
 from models.base_model import BaseModel
+import os
+from models import storage
+from models.engine.file_storage import FileStorage
+import datetime
 
 
 class TestBaseModel(unittest.TestCase):
+    """ Suite of console tests"""
+
+    my_model = BaseModel()
+
     def test_attributes(self):
         my_model = BaseModel()
         my_model.name = "My First Model"
